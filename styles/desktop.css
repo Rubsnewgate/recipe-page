@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 50px 0;
+  background-color: hsl(330, 100%, 98%);
+}
+
+@media screen and (max-width: 541px) {
+  body {
+    padding: 25px 10px;
+  }
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  width: 680px;
+  padding: 40px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.presentation__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.presentation__card-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card__title {
+  margin: 0;
+  font-family: "Young Serif", serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+.card__description {
+  margin: 0;
+  font-size: 1.6rem;
+  color: hsl(30, 10%, 34%);
+}
+
+.card__preparation-time {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: hsl(30, 54%, 90%);
+  border-radius: 10px;
+}
+
+.preparation-time__title {
+  margin: 0;
+  font-size: 2rem;
+  color: hsl(332, 51%, 32%);
+}
+
+.list-item {
+  font-size: 1.6rem;
+  color: hsl(30, 10%, 34%);
+}
+.list-item span {
+  font-weight: bold;
+  color: hsl(24, 5%, 18%);
+}
+
+.ingredients-card, .instructions-card {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.ingredients-card__title, .instructions-card__title, .nutrition-table__title {
+  margin: 0;
+  font-family: "Young Serif", serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: hsl(14, 45%, 36%);
+}
+
+.ingredients-card__list, .instructions-card__list {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: hsl(30, 10%, 34%);
+}
+
+.instructions-card__list span {
+  color: hsl(24, 5%, 18%);
+  font-weight: bold;
+}
+
+.nutrition {
+  width: 100%;
+}
+
+.nutrition-table__description {
+  font-size: 1.6rem;
+  color: hsl(30, 10%, 34%);
+}
+
+.nutrition__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.nutrition__table-row {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition__table-row:last-of-type {
+  border: none;
+}
+
+.table-left, .table-right {
+  padding: 10px;
+  font-size: 1.6rem;
+}
+
+.table-left {
+  color: hsl(30, 10%, 34%);
+}
+
+.table-right {
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+}
+
+/*# sourceMappingURL=desktop.css.map */

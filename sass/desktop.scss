@@ -1,0 +1,104 @@
+@import 'guide.scss';
+
+// Main Container
+.main-wrapper {
+	@include flexbox(column, start, center, 30px);
+	width: 680px;
+	padding: 40px;
+	font-family: $primary-font;
+	background-color: $white;
+	border-radius: 10px;
+}
+
+// Presentation Section
+.presentation__card {
+	@include flexbox(column, null, null, 20px);
+}
+.presentation__card-img {
+	width: 100%;
+	border-radius: 10px;
+}
+.card__title {
+	margin: 0;
+	font-family: $heading-font;
+	font-size: $lg-size;
+	font-weight: 400;
+}
+.card__description {
+	margin: 0;
+	font-size: $sm-size;
+	color: $wenge-brown;
+}
+.card__preparation-time {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: $eggshell;
+	border-radius: 10px;
+}
+.preparation-time__title {
+	margin: 0;
+	font-size: $md-size;
+	color: $dark-raspberry;
+}
+.list-item {
+	font-size: $sm-size;
+	color: $wenge-brown;
+	span {
+		font-weight: bold;
+		color: $dark-charcoal;
+	}
+}
+
+// Ingredients And Instruction Section
+.ingredients-card, .instructions-card {
+	border-bottom: 1px solid $ligh-grey;
+}
+.ingredients-card__title, .instructions-card__title, .nutrition-table__title {
+	margin: 0;
+	font-family: $heading-font;
+	font-size: $subtitle;
+	font-weight: 400;
+	color: $nutmeg;
+}
+.ingredients-card__list, .instructions-card__list {
+	font-size: $sm-size;
+	line-height: 2;
+	color: $wenge-brown;
+}
+.instructions-card__list {
+	span {
+		color: $dark-charcoal;
+		font-weight: bold;
+	}
+}
+
+// Nutrition Section
+.nutrition {
+	width: 100%;
+}
+.nutrition-table__description {
+	font-size: $sm-size;
+	color: $wenge-brown;
+}
+.nutrition__table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+.nutrition__table-row {
+	border-bottom: 1px solid $ligh-grey;
+}
+.nutrition__table-row:last-of-type {
+	border: none;
+}
+.table-left, .table-right {
+	padding: 10px;
+	font-size: $sm-size;
+}
+.table-left {
+	color: $wenge-brown;
+}
+.table-right {
+	font-weight: bold;
+	color: $nutmeg;
+}

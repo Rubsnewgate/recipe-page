@@ -1,0 +1,52 @@
+// primary colors
+$nutmeg: hsl(14, 45%, 36%)
+$dark-raspberry: hsl(332, 51%, 32%)
+
+// secondary colors
+$dark-charcoal: hsl(24, 5%, 18%)
+$wenge-brown: hsl(30, 10%, 34%)
+$ligh-grey: hsl(30, 18%, 87%)
+
+// neutral colors
+$eggshell: hsl(30, 54%, 90%)
+$rose-white: hsl(330, 100%, 98%)
+$white: hsl(0, 0%, 100%)
+
+// typography
+$primary-font: 'Outfit', sans-serif
+$heading-font: 'Young Serif', serif
+
+// font-sizes
+$lg-size: 3.2rem
+$subtitle: 2.8rem
+$md-size: 2rem
+$sm-size: 1.6rem
+$xsm-size: 1.4rem
+
+// general resets
+*
+	box-sizing: border-box
+
+html
+	font-size: 62.5%
+
+body
+	display: grid
+	place-content: center
+	width: 100%
+	margin: 0
+	padding: 20px 0
+	background-color: $eggshell
+
+// mixins
+@mixin flexbox($direction:null, $justify:null, $align:null, $gap:null)
+	display: flex
+	flex-direction: $direction
+	justify-content: $justify
+	align-items: $align
+	gap: $gap
+
+// breakpoints
+@media screen and (max-width: 541px)
+	body
+		padding: 25px 10px

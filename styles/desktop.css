@@ -11,7 +11,7 @@ body {
   place-content: center;
   width: 100%;
   margin: 0;
-  padding: 50px 0;
+  padding: 20px 0;
   background-color: hsl(30, 54%, 90%);
 }
 
@@ -105,22 +105,18 @@ body {
 .nutrition {
   width: 100%;
 }
-
 .nutrition-table__description {
   font-size: 1.6rem;
   color: hsl(30, 10%, 34%);
 }
-
 .nutrition__table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
-
 .nutrition__table-row {
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
-
 .nutrition__table-row:last-of-type {
   border: none;
 }

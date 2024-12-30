@@ -1,0 +1,98 @@
+@use 'guide.sass'
+
+// main container
+.main-wrapper
+	@include guide.flexbox(column, start, center, 30px)
+	width: 680px
+	padding: 40px
+	font-family: guide.$primary-font
+	background-color: guide.$white
+	border-radius: 10px
+
+// presentation section
+.presentation__card
+	@include guide.flexbox(column, null, null, 20px)
+
+.presentation__card-img
+	width: 100%
+	border-radius: 10px
+
+.card__title
+	margin: 0
+	font-family: guide.$heading-font
+	font-size: guide.$lg-size
+	font-weight: 400
+
+.card__description
+	margin: 0
+	font-size: guide.$sm-size
+	color: guide.$wenge-brown
+
+.card__preparation-time
+	margin-top: 20px
+	padding: 20px
+	background-color: guide.$rose-white
+	border-radius: 10px
+
+.preparation-time__title
+	margin: 0
+	font-size: guide.$md-size
+	color: guide.$dark-raspberry
+
+.list-item
+	font-size: guide.$sm-size
+	color: guide.$wenge-brown
+	span
+		font-weight: bold
+		color: guide.$dark-charcoal
+
+// ingredients and instruction section
+.ingredients-card, .instructions-card
+	border-bottom: 1px solid guide.$ligh-grey
+
+.ingredients-card__title, .instructions-card__title, .nutrition-table__title
+	margin: 0
+	font-family: guide.$heading-font
+	font-size: guide.$subtitle
+	font-weight: 400
+	color: guide.$nutmeg
+
+.ingredients-card__list, .instructions-card__list
+	font-size: guide.$sm-size
+	line-height: 2
+	color: guide.$wenge-brown
+
+.instructions-card__list
+	span
+		color: guide.$dark-charcoal
+		font-weight: bold
+
+// nutrition section
+.nutrition
+	width: 100%
+
+	&-table__description
+		font-size: guide.$sm-size
+		color: guide.$wenge-brown
+
+	&__table
+		width: 100%
+		table-layout: fixed
+		border-collapse: collapse
+
+	&__table-row
+		border-bottom: 1px solid guide.$ligh-grey
+
+	&__table-row:last-of-type
+		border: none
+
+.table-left, .table-right
+	padding: 10px
+	font-size: guide.$sm-size
+
+.table-left
+	color: guide.$wenge-brown
+
+.table-right
+	font-weight: bold
+	color: guide.$nutmeg

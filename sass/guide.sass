@@ -1,52 +1,51 @@
-// primary colors
+// Primary colors
 $nutmeg: hsl(14, 45%, 36%)
 $dark-raspberry: hsl(332, 51%, 32%)
 
-// secondary colors
+// Secondary colors
 $dark-charcoal: hsl(24, 5%, 18%)
-$wenge-brown: hsl(30, 10%, 34%)
-$ligh-grey: hsl(30, 18%, 87%)
+$brown: hsl(30, 10%, 34%)
+$light-grey: hsl(30, 18%, 87%)
 
-// neutral colors
+// Neutral colors
 $eggshell: hsl(30, 54%, 90%)
 $rose-white: hsl(330, 100%, 98%)
 $white: hsl(0, 0%, 100%)
 
-// typography
+// Typography
 $primary-font: 'Outfit', sans-serif
 $heading-font: 'Young Serif', serif
 
-// font-sizes
-$lg-size: 3.2rem
-$subtitle: 2.8rem
-$md-size: 2rem
-$sm-size: 1.6rem
-$xsm-size: 1.4rem
+$lg-size: 2rem
+$subtitle: 1.75rem
+$md-size: 1.25rem
+$sm-size: 1rem
 
-// general resets
-*
+// Resets
+*, *::before, *::after
 	box-sizing: border-box
 
-html
-	font-size: 62.5%
+*
+	margin: 0
 
 body
 	display: grid
 	place-content: center
 	width: 100%
-	margin: 0
-	padding: 20px 0
+	padding: calc(0.5rem + 1.5625vw)
 	background-color: $eggshell
 
-// mixins
+h1, h2, h3, h4, h5, h6
+	text-wrap: balance
+
+p
+	text-wrap: pretty
+	line-height: 1.5
+
+// Layout
 @mixin flexbox($direction:null, $justify:null, $align:null, $gap:null)
 	display: flex
 	flex-direction: $direction
 	justify-content: $justify
 	align-items: $align
 	gap: $gap
-
-// breakpoints
-@media screen and (max-width: 541px)
-	body
-		padding: 25px 10px

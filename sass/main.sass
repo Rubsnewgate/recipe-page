@@ -1,0 +1,109 @@
+@use 'guide.sass'
+
+// Main container
+.main
+	@include guide.flexbox(column, start, center, 1.25rem)
+	width: min(42.5rem, 100%)
+	margin: 0 auto
+	padding: 0.5rem
+	font-family: guide.$primary-font
+	background-color: guide.$white
+	border-radius: 0.5rem
+
+// Recipe presentation
+.presentation
+	@include guide.flexbox(column, null, null, 1.25rem)
+
+.presentation__img
+	width: 100%
+	border-radius: 0.5rem
+
+.presentation__title
+	font-family: guide.$heading-font
+	font-size: guide.$subtitle
+	font-weight: 400
+
+.presentation__description
+	font-size: guide.$sm-size
+	color: guide.$brown
+
+.preparation-time
+	margin-block-start: 1.25rem
+	padding: 0.5rem
+	background-color: guide.$rose-white
+	border-radius: 0.5rem
+
+.preparation-time__title
+	font-size: guide.$md-size
+	color: guide.$dark-raspberry
+
+.list-item
+	font-size: guide.$sm-size
+	color: guide.$brown
+	span
+		font-weight: bold
+		color: guide.$dark-charcoal
+
+// Ingredients and instruction
+.ingredients-and-instructions
+	@include guide.flexbox(column, start, null, 1.25rem)
+
+.ingredients, .instructions
+	border-bottom: 1px solid guide.$light-grey
+
+.ingredients__title, .instructions__title, .nutrition__title
+	font-family: guide.$heading-font
+	font-size: guide.$subtitle
+	font-weight: 400
+	color: guide.$nutmeg
+
+.ingredients__list, .instructions__list
+	font-size: guide.$sm-size
+	line-height: 2
+	color: guide.$brown
+
+.instruction
+	span
+		color: guide.$dark-charcoal
+		font-weight: bold
+
+// Nutrition
+.nutrition
+	width: 100%
+
+	&__table-description
+		font-size: guide.$sm-size
+		color: guide.$brown
+
+	&__table
+		width: 100%
+		table-layout: fixed
+		border-collapse: collapse
+
+	&__table-row
+		border-block-end: 1px solid guide.$light-grey
+
+	&__table-row:last-of-type
+		border: none
+
+.table-left, .table-right
+	padding: 0.5rem
+	font-size: guide.$sm-size
+
+.table-left
+	color: guide.$brown
+
+.table-right
+	font-weight: bold
+	color: guide.$nutmeg
+
+@media screen and (min-width: 34rem)
+	.main
+		gap: 2rem
+		padding: 2.5rem
+
+	.presentation__title
+		font-size: guide.$lg-size
+
+	.preparation-time
+		padding: 1.25rem

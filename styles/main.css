@@ -1,77 +1,78 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+* {
+  margin: 0;
 }
 
 body {
   display: grid;
   place-content: center;
   width: 100%;
-  margin: 0;
-  padding: 20px 0;
+  padding: calc(0.5rem + 1.5625vw);
   background-color: hsl(30, 54%, 90%);
 }
 
-@media screen and (max-width: 541px) {
-  body {
-    padding: 25px 10px;
-  }
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
 }
-.main-wrapper {
+
+p {
+  text-wrap: pretty;
+  line-height: 1.5;
+}
+
+.main {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  gap: 30px;
-  width: 680px;
-  padding: 40px;
+  gap: 1.25rem;
+  width: min(42.5rem, 100%);
+  margin: 0 auto;
+  padding: 0.5rem;
   font-family: "Outfit", sans-serif;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
-.presentation__card {
+.presentation {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-.presentation__card-img {
+.presentation__img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
-.card__title {
-  margin: 0;
+.presentation__title {
   font-family: "Young Serif", serif;
-  font-size: 3.2rem;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 
-.card__description {
-  margin: 0;
-  font-size: 1.6rem;
+.presentation__description {
+  font-size: 1rem;
   color: hsl(30, 10%, 34%);
 }
 
-.card__preparation-time {
-  margin-top: 20px;
-  padding: 20px;
+.preparation-time {
+  margin-block-start: 1.25rem;
+  padding: 0.5rem;
   background-color: hsl(330, 100%, 98%);
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
 .preparation-time__title {
-  margin: 0;
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: hsl(332, 51%, 32%);
 }
 
 .list-item {
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: hsl(30, 10%, 34%);
 }
 .list-item span {
@@ -79,25 +80,31 @@ body {
   color: hsl(24, 5%, 18%);
 }
 
-.ingredients-card, .instructions-card {
+.ingredients-and-instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.25rem;
+}
+
+.ingredients, .instructions {
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 
-.ingredients-card__title, .instructions-card__title, .nutrition-table__title {
-  margin: 0;
+.ingredients__title, .instructions__title, .nutrition__title {
   font-family: "Young Serif", serif;
-  font-size: 2.8rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: hsl(14, 45%, 36%);
 }
 
-.ingredients-card__list, .instructions-card__list {
-  font-size: 1.6rem;
+.ingredients__list, .instructions__list {
+  font-size: 1rem;
   line-height: 2;
   color: hsl(30, 10%, 34%);
 }
 
-.instructions-card__list span {
+.instruction span {
   color: hsl(24, 5%, 18%);
   font-weight: bold;
 }
@@ -105,8 +112,8 @@ body {
 .nutrition {
   width: 100%;
 }
-.nutrition-table__description {
-  font-size: 1.6rem;
+.nutrition__table-description {
+  font-size: 1rem;
   color: hsl(30, 10%, 34%);
 }
 .nutrition__table {
@@ -115,15 +122,15 @@ body {
   border-collapse: collapse;
 }
 .nutrition__table-row {
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+  border-block-end: 1px solid hsl(30, 18%, 87%);
 }
 .nutrition__table-row:last-of-type {
   border: none;
 }
 
 .table-left, .table-right {
-  padding: 10px;
-  font-size: 1.6rem;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .table-left {
@@ -135,4 +142,17 @@ body {
   color: hsl(14, 45%, 36%);
 }
 
-/*# sourceMappingURL=desktop.css.map */
+@media screen and (min-width: 34rem) {
+  .main {
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+  .presentation__title {
+    font-size: 2rem;
+  }
+  .preparation-time {
+    padding: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
